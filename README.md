@@ -1,6 +1,6 @@
 # ROS1 Melodic Installation for Ubuntu 20.04
 
-targets: ROS1 Installation and Implementation
+targets: ROS1 (Melodic) Installation and Implementation
 
 Installation Options
 ---

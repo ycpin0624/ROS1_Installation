@@ -21,7 +21,7 @@ Installation of ROS Melodic
 2. Set up your keys
     ```bash=
     sudo apt install curl # if you haven't already installed 
-    curl curl -s https:\/\/raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+    curl curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
     ```
 
 3. Installation
@@ -122,7 +122,7 @@ ROS test turtle
 Implementation of ROS Melodic
 ---
 
-#### Implementation - ROS workspace create
+### Implementation - ROS workspace create
 
 1. Create a workspace
     ```bash=
@@ -140,7 +140,7 @@ Implementation of ROS Melodic
     source devel/setup.bash
     ```
 
-#### Implementation - ROS package create
+### Implementation - ROS package create
 
 1. Create a package
     ```bash=
@@ -160,7 +160,7 @@ Implementation of ROS Melodic
     roscd test/
     ```
 
-#### Implementation - ROS publisher & subscriber create
+### Implementation - ROS publisher & subscriber create
 
 1. Clone the example code
     ```bash=
@@ -170,17 +170,23 @@ Implementation of ROS Melodic
     cp ros1-installation/src/helloworld_listener.py src/helloworld_listener.py
     ```
 
-2. Create the publisher Node
+2. ROS Master
     ```bash=
     # terminal 1
+    roscore 
+    ```
+
+3. Create the publisher Node
+    ```bash=
+    # terminal 2
     roscd test/src
     chmod +x helloworld.py
     rosrun test helloworld.py
     ```
 
-3. Create the subscriber Node
+4. Create the subscriber Node
     ```bash=
-    # terminal 1
+    # terminal 3
     roscd test/src
     chmod +x helloworld_listener.py
     rosrun test helloworld_listener.py

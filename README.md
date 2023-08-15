@@ -34,14 +34,14 @@ Installation of ROS Melodic
     sudo apt update
     ```
 
-    - Desktop-Full Install: (Recommended)
+    - Desktop-Full install: (Recommended)
 
     ```bash=
     # Included ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception.
     sudo apt install ros-melodic-desktop-full
     ```
 
-    - Desktop Install:
+    - Desktop install:
 
     ```bash=
     # Included ROS, rqt, rviz, and robot-generic libraries.
@@ -55,7 +55,7 @@ Installation of ROS Melodic
     sudo apt install ros-melodic-ros-base
     ```
 
-4. Individual Package
+4. Individual package
 
     ```bash=
     sudo apt install ros-melodic-PACKAGE

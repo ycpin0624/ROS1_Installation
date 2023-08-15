@@ -4,6 +4,7 @@ targets: ROS1 (Melodic) Installation and Implementation
 
 Installation Options
 ---
+
 | | ROS Kinetic Kame | ROS Melodic Morenia | ROS Noetic Ninjemys |
 | ---- | ---- | ---- | ---- |
 | Release Date | May, 2016 | May, 2018 | May, 2020 |
@@ -13,57 +14,68 @@ Installation Options
 
 Installation of ROS Melodic
 ---
+
 1. Setup your sources.list
+
     ```bash=
     sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
     ```
 
 2. Set up your keys
+
     ```bash=
     sudo apt install curl # if you haven't already installed 
     curl curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
     ```
 
 3. Installation
+
     ```bash=
     sudo apt update
     ```
 
     - Desktop-Full Install: (Recommended)
+
     ```bash=
     # Included ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception.
     sudo apt install ros-melodic-desktop-full
     ```
 
     - Desktop Install:
+
     ```bash=
     # Included ROS, rqt, rviz, and robot-generic libraries.
     sudo apt install ros-melodic-desktop
     ```
 
     - ROS-Base: (Bare Bones):
+
     ```bash=
     # Included ROS package, build, and communication libraries. No GUI tools.
     sudo apt install ros-melodic-ros-base
     ```
 
 4. Individual Package
+
     ```bash=
     sudo apt install ros-melodic-PACKAGE
     apt search ros-melodic # To find available packages, use this command.
     ```
 
 5. Environment setup
+
     ```bash=
     echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc source ~/.bashrc
     ```
 
 6. Install dependencies for building packages
+
     ```bash=
     sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
     ```
 
 7. Initialize rosdep
+
     ```bash=
     sudo apt install python-rosdep
     sudo rosdep init
@@ -81,38 +93,44 @@ ROS Architecture
 
 ![](ROS_structure.png)
 
-ROS test turtle
+ROS Test
 ---
 
 1. ROS Master
+
     ```bash=
     # terminal 1
     roscore 
     ```
 
 2. ROS Subscriber
+
     ```bash=
     # terminal 2
     turtlesim_node 
     ```
 
 3. ROS Publisher
+
     ```bash=
     # terminal 3
     turtle_teleop_key 
     ```
 
 4. Display Nodes structure of ROS Master 
+
     ```bash=
     rqt_graph
     ```
 
 5. List every running Topics
+
     ```bash=
     rostopic list
     ```
 
 6. Check detail information of single Topic
+
     ```bash=
     rostopic info {topic_name}
     ```
@@ -125,17 +143,20 @@ Implementation of ROS Melodic
 ### Implementation - ROS workspace create
 
 1. Create a workspace
+
     ```bash=
     mkdir -p ~/catkin_ws/src
     ```
 
 2. Make workspace
+
     ```bash=
     cd catkin_ws
     catkin_make
     ```
 
 3. Source this folder as ROS workspace
+
     ```bash=
     source devel/setup.bash
     ```
@@ -143,6 +164,7 @@ Implementation of ROS Melodic
 ### Implementation - ROS package create
 
 1. Create a package
+
     ```bash=
     cd src
 
@@ -155,6 +177,7 @@ Implementation of ROS Melodic
     ```
 
 2. Open new terminal, check workspace & package
+
     ```bash=
     source ~/catkin_ws/devel/setup.bash
     roscd test/
@@ -163,6 +186,7 @@ Implementation of ROS Melodic
 ### Implementation - ROS publisher & subscriber create
 
 1. Clone the example code
+
     ```bash=
     git clone https://github.com/ycpin0624/ros1-installation.git
 
@@ -171,12 +195,14 @@ Implementation of ROS Melodic
     ```
 
 2. ROS Master
+
     ```bash=
     # terminal 1
     roscore 
     ```
 
 3. Create the publisher Node
+
     ```bash=
     # terminal 2
     roscd test/src
@@ -185,9 +211,18 @@ Implementation of ROS Melodic
     ```
 
 4. Create the subscriber Node
+
     ```bash=
     # terminal 3
     roscd test/src
     chmod +x helloworld_listener.py
     rosrun test helloworld_listener.py
     ```
+
+---
+
+Official Document
+---
+
+- [ROS Melodic Morenia](http://wiki.ros.org/melodic)
+- [ROS Noetic Ninjemys](http://wiki.ros.org/noetic)

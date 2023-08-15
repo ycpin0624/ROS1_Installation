@@ -203,7 +203,7 @@ Implementation of ROS Melodic
 1. Clone the example code
 
     ```bash=
-    git clone https://github.com/ycpin0624/ros1-installation.git
+    git clone https://github.com/ycpranchu/ros1-installation.git
 
     cp ros1-installation/src/helloworld.py src/helloworld.py
     cp ros1-installation/src/helloworld_listener.py src/helloworld_listener.py

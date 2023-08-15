@@ -99,7 +99,7 @@ ROS 1 Architecture
 - Node
 - Topic
 
-![](ROS_structure.png)
+    ![](ROS_structure.png)
 
 ROS Test
 ---

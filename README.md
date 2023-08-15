@@ -1,4 +1,4 @@
-# ROS1 Melodic Installation for Ubuntu 20.04
+# ROS1 Melodic Installation for Ubuntu 18.04/20.04
 
 targets: ROS1 (Melodic) Installation and Implementation
 
@@ -65,7 +65,8 @@ Installation of ROS Melodic
 5. Environment setup
 
     ```bash=
-    echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc source ~/.bashrc
+    echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
     ```
 
 6. Install dependencies for building packages

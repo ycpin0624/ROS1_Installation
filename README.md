@@ -1,6 +1,6 @@
 # ROS1 Melodic Installation for Ubuntu 18.04/20.04
 
-targets: ROS1 (Melodic) Installation and Implementation
+targets: ROS 1 (Melodic) Installation and Implementation
 
 Installation Options
 ---
@@ -83,9 +83,16 @@ Installation of ROS Melodic
     rosdep update
     ```
 
+8. Check the current ROS environment
+
+    ```bash=
+    # melodic (ROS1)
+    printenv | grep ROS
+    ```
+
 ---
 
-ROS Architecture
+ROS 1 Architecture
 ---
 
 - Master
@@ -108,14 +115,14 @@ ROS Test
 
     ```bash=
     # terminal 2
-    turtlesim_node 
+    rosrun turtlesim turtlesim_node 
     ```
 
 3. ROS Publisher
 
     ```bash=
     # terminal 3
-    turtle_teleop_key 
+    rosrun turtlesim turtle_teleop_key 
     ```
 
 4. Display Nodes structure of ROS Master 
@@ -143,20 +150,27 @@ Implementation of ROS Melodic
 
 ### Implementation - ROS workspace create
 
-1. Create a workspace
+1. ROS 1 Melodic environment setup
 
     ```bash=
+    source /opt/ros/melodic/setup.bash
+    ```
+
+2. Create a workspace
+
+    ```bash=
+    cd
     mkdir -p ~/catkin_ws/src
     ```
 
-2. Make workspace
+3. Make workspace
 
     ```bash=
     cd catkin_ws
     catkin_make
     ```
 
-3. Source this folder as ROS workspace
+4. Source this folder as ROS workspace
 
     ```bash=
     source devel/setup.bash

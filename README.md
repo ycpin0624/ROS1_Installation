@@ -125,22 +125,22 @@ ROS Test
     rosrun turtlesim turtle_teleop_key 
     ```
 
-4. Display Nodes structure of ROS Master 
-
-    ```bash=
-    rqt_graph
-    ```
-
-5. List every running Topics
+4. List every running Topics
 
     ```bash=
     rostopic list
     ```
 
-6. Check detail information of single Topic
+5. Check detail information of single Topic
 
     ```bash=
     rostopic info {topic_name}
+    ```
+
+6. Display Nodes structure of ROS Master 
+
+    ```bash=
+    rqt_graph
     ```
 
 ---
@@ -188,13 +188,12 @@ Implementation of ROS Melodic
 
     cd ..
     catkin_make
-    . ~/catkin_ws/devel/setup.bash
     ```
 
 2. Open new terminal, check workspace & package
 
     ```bash=
-    source ~/catkin_ws/devel/setup.bash
+    . ~/catkin_ws/devel/setup.bash
     roscd test/
     ```
 
@@ -220,6 +219,7 @@ Implementation of ROS Melodic
 
     ```bash=
     # terminal 2
+    . ~/catkin_ws/devel/setup.bash
     roscd test/src
     chmod +x helloworld.py
     rosrun test helloworld.py
@@ -229,9 +229,22 @@ Implementation of ROS Melodic
 
     ```bash=
     # terminal 3
+    . ~/catkin_ws/devel/setup.bash
     roscd test/src
     chmod +x helloworld_listener.py
     rosrun test helloworld_listener.py
+    ```
+
+5. Use **rostopic** to list the current Topic
+
+    ```bash=
+    rostopic list
+    ```
+
+6. Display Nodes structure by GUI tool
+
+    ```bash=
+    rqt_graph
     ```
 
 ---

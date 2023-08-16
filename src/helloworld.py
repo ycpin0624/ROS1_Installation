@@ -9,5 +9,8 @@ if __name__ == '__main__':
 	rate = rospy.Rate(10)
 	
 	while not rospy.is_shutdown():
-		rospy.loginfo("blink") 
-		rospy.sleep(0.01)
+		msg = String()
+		msg.data = "Hello, ROS!"
+		pub.publish(msg)		
+		rospy.loginfo(msg) 
+		rospy.sleep(0.1)

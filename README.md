@@ -99,7 +99,7 @@ ROS 1 Architecture
 - Node
 - Topic
 
-    ![](ROS_structure.png)
+    ![](images/ros_structure.png)
 
 ROS Test
 ---
@@ -225,6 +225,8 @@ Implementation of ROS Melodic
     rosrun test helloworld.py
     ```
 
+    ![](images/publisher.png)
+
 4. Create the subscriber Node
 
     ```bash=
@@ -235,17 +237,23 @@ Implementation of ROS Melodic
     rosrun test helloworld_listener.py
     ```
 
-5. Use **rostopic** to list the current Topic
+    ![](images/subscriber.png)
+
+5. List the current Topic
 
     ```bash=
     rostopic list
     ```
+
+    ![](images/rostopic.png)
 
 6. Display Nodes structure by GUI tool
 
     ```bash=
     rqt_graph
     ```
+
+    ![](images/rqt_graph.png)
 
 ---
 

@@ -115,14 +115,14 @@ ROS Test
 
     ```bash=
     # terminal 2
-    rosrun turtlesim turtlesim_node 
+    rosrun turtlesim turtlesim_node
     ```
 
 3. ROS Publisher
 
     ```bash=
     # terminal 3
-    rosrun turtlesim turtle_teleop_key 
+    rosrun turtlesim turtle_teleop_key
     ```
 
 4. List every running Topics
@@ -137,7 +137,7 @@ ROS Test
     rostopic info {topic_name}
     ```
 
-6. Display Nodes structure of ROS Master 
+6. Display Nodes structure of ROS Master
 
     ```bash=
     rqt_graph

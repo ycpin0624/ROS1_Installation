@@ -1,6 +1,6 @@
 # ROS1 Melodic Installation for Ubuntu 18.04/20.04
 
-targets: ROS 1 (Melodic) Installation and Implementation
+- targets: ROS 1 (Melodic) Installation and Implementation.
 
 Installation Options
 ---
@@ -34,14 +34,14 @@ Installation of ROS Melodic
     sudo apt update
     ```
 
-    - Desktop-Full Install: (Recommended)
+    - Desktop-Full install: (Recommended)
 
     ```bash=
     # Included ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception.
     sudo apt install ros-melodic-desktop-full
     ```
 
-    - Desktop Install:
+    - Desktop install:
 
     ```bash=
     # Included ROS, rqt, rviz, and robot-generic libraries.
@@ -55,7 +55,7 @@ Installation of ROS Melodic
     sudo apt install ros-melodic-ros-base
     ```
 
-4. Individual Package
+4. Individual package
 
     ```bash=
     sudo apt install ros-melodic-PACKAGE
@@ -202,7 +202,7 @@ Implementation of ROS Melodic
 1. Clone the example code
 
     ```bash=
-    git clone https://github.com/ycpin0624/ros1-installation.git
+    git clone https://github.com/ycpranchu/ros1-installation.git
 
     cp ros1-installation/src/helloworld.py src/helloworld.py
     cp ros1-installation/src/helloworld_listener.py src/helloworld_listener.py

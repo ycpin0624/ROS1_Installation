@@ -1,4 +1,5 @@
-# ROS1 Melodic Installation for Ubuntu 18.04/20.04
+ROS1 Melodic Installation for Ubuntu 18.04/20.04
+===
 
 - targets: ROS 1 (Melodic) Installation and Implementation.
 
@@ -10,7 +11,6 @@ Installation Options
 | Release Date | May, 2016 | May, 2018 | May, 2020 |
 | Supported Date | April, 2021 | May, 2023 | May, 2025 |
 | Ubuntu Version Minimum Required | Not recommended to install | Ubuntu 18.04 | Ubuntu 20.04 |
-
 
 Installation of ROS Melodic
 ---
@@ -34,21 +34,21 @@ Installation of ROS Melodic
     sudo apt update
     ```
 
-    - Desktop-Full install: (Recommended)
+- Desktop-Full install: (Recommended)
 
     ```bash=
     # Included ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception.
     sudo apt install ros-melodic-desktop-full
     ```
 
-    - Desktop install:
+- Desktop install:
 
     ```bash=
     # Included ROS, rqt, rviz, and robot-generic libraries.
     sudo apt install ros-melodic-desktop
     ```
 
-    - ROS-Base: (Bare Bones):
+- ROS-Base: (Bare Bones):
 
     ```bash=
     # Included ROS package, build, and communication libraries. No GUI tools.
@@ -89,8 +89,6 @@ Installation of ROS Melodic
     # melodic (ROS1)
     printenv | grep ROS
     ```
-
----
 
 ROS 1 Architecture
 ---
@@ -142,8 +140,6 @@ ROS Test
     ```bash=
     rqt_graph
     ```
-
----
 
 Implementation of ROS Melodic
 ---
@@ -254,8 +250,6 @@ Implementation of ROS Melodic
     ```
 
     ![](images/rqt_graph.png)
-
----
 
 Official Document
 ---
